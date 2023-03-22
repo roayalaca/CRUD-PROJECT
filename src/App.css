@@ -1,0 +1,281 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+
+}
+
+.user {
+  position: relative;
+  left: 71rem;
+  top: 2rem;
+  cursor: pointer;
+  background-color: #002B5B;
+  color: #fff;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+.title{
+  position: relative;
+  top: 3rem;
+  left: 30rem;
+  font-size: 3em;
+  text-transform: uppercase;
+  width: 100%;
+  line-height: 0.70em;
+  outline: none;
+  color: #000000;
+
+
+}
+
+
+.hola {
+  background-color: aqua;
+}
+
+
+.List {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  position: relative;
+  top: 7rem;
+  left: 5.2rem;
+  
+}
+
+.List li {
+  list-style: none;
+  display: grid;
+  place-content: center;
+  width: 280px;
+  height: 400px;
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border-top:1px solid rgba(255, 255, 255, 0.5);
+  border-left:1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+.Form{
+  background-color: #002B5B;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  position: absolute;
+  z-index: 100;
+  left: 30.4rem;
+  top: 7rem;
+  width: 23.5rem;
+  height: 26rem;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.cross{
+  display:flex;
+  position: relative;
+}
+
+.new{
+  position: relative;
+  left: 4.2rem;
+  bottom: 0.1rem;
+
+}
+
+.button{
+  position: relative;
+  left: 11rem;
+  background-color: #002B5B;
+  border: none;
+  bottom: 0.5rem;
+  font-size: 1.3rem;
+  height: 1rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.name{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+}
+
+.name input{
+  border-radius: 20px;
+  position: relative;
+  top: 0.5rem;
+  height: 1.5rem;
+  width: 18rem;
+}
+
+.category{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+}
+
+.category input{
+  border-radius: 20px;
+  position: relative;
+  top: 0.5rem;
+  height: 1.5rem;
+}
+
+.price{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+}
+
+.price input{
+  border-radius: 20px;
+  position: relative;
+  top: 0.5rem;
+  height: 1.5rem;
+}
+
+.available{
+  position: relative;
+  right: 1rem;
+}
+
+.available input{
+  position: relative;
+  left: 1rem;
+}
+
+.create{
+  width: 18rem;
+  height: 2rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.Delete{
+  position: relative;
+  top: 4rem;
+  left: 10rem;
+}
+
+.trash{
+  background-color: #850E35;
+  color: #fff;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.pen{
+  background-color: #A62349;
+  color: #fff;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.NAME{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+  font-size: 2em;
+  pointer-events: none;
+  bottom: 5rem;
+}
+
+.CATEGORY{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+  bottom: 3rem;
+}
+
+.CATEGORY span{
+  color: rgba(110, 77, 175, 0.5);
+}
+
+.PRICE{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.PRICE span{
+  color: rgba(110, 77, 175, 0.5);
+}
+
+.AVAILABILITY{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 1rem;
+  bottom: -1rem;
+}
+
+.AVAILABILITY span{
+  color: rgba(110, 77, 175, 0.5);
+}
+
+
+@media screen and (max-width: 320px){
+
+ 
+  .List{
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    left: 5.5rem;
+  }
+
+  .List li{
+    width: 17rem;
+  }
+
+  .title{
+    position: relative;
+    font-size: 25px;
+    left: 4rem;
+    top: 4rem;
+  }
+
+  .user{
+    position: relative;
+    left: 18.5rem;
+    width: 5.5rem;
+    font-size: 12px;
+    top: 2.5rem;
+  }
+
+
+
+
+
+}
