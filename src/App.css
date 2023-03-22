@@ -274,8 +274,69 @@
     top: 2.5rem;
   }
 
+  .Form{
+    position: absolute;
+    z-index: 100;
+    left: 4rem;
+    top: 10rem;
+    width: 19rem;
+  }
 
+  .button{
+    left: 8rem;
+  }
 
+  .create{
+    width: 12rem;
+    position: relative;
+    left: 3rem;
+  }
 
+  .name{
+    left: 0.3rem;
+  }
+
+  .name input{
+    width: 17rem;
+  }
+
+  .name input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .category{
+    left: 0.3rem;
+  }
+
+  .category input{
+    width: 17rem;
+  }
+
+  .category input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .price{
+    left: 0.3rem;
+  }
+
+  .price input{
+    width: 17rem;
+  }
+
+  .price input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .available{
+    left: 0.3rem;
+  }
+
+  .name input{
+    width: 17rem;
+  }
 
 }
