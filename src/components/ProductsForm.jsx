@@ -86,7 +86,7 @@ const ProductsForm = ({newProduct, updateProduct, selectedProduct, setForm, clea
                 </div>
                 <div className='available'>
                     <label htmlFor="isAvailable">
-                        Availability  
+                        Availability: 
                     </label>
                     <input 
                     type="checkbox"

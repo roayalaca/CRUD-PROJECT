@@ -61,9 +61,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='title'>Products List</h1>
-
-      <button className='user' onClick={() => setForm(true)}>+ New User</button>
+      <div className='Upper'>
+        <h1 className='title'>Products List</h1>
+        <button className='user' onClick={() => setForm(true)}>+ New User</button>
+      </div>
+   
 
       {
         form && <ProductsForm

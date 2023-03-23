@@ -6,11 +6,15 @@
 }
 
 .App {
+  background: radial-gradient(#fff, #282A3A);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
 
 }
 
 .user {
-  position: relative;
   left: 71rem;
   top: 2rem;
   cursor: pointer;
@@ -24,8 +28,12 @@
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 
+.Upper{
+  display: flex;
+  margin-top: 2rem;
+}
+
 .title{
-  position: relative;
   top: 3rem;
   left: 30rem;
   font-size: 3em;
@@ -34,7 +42,8 @@
   line-height: 0.70em;
   outline: none;
   color: #000000;
-
+  display: flex;
+  justify-content: center;
 
 }
 
@@ -47,17 +56,17 @@
 .List {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  position: relative;
   top: 7rem;
   left: 5.2rem;
-  
+  gap: 4rem;
+  margin-top: 2rem;  
 }
 
 .List li {
   list-style: none;
   display: grid;
   place-content: center;
+  gap: 2rem;
   width: 280px;
   height: 400px;
   backdrop-filter: blur(5px);
@@ -76,14 +85,12 @@
   display: grid;
   place-content: center;
   gap: 2rem;
-  position: absolute;
   z-index: 100;
-  left: 30.4rem;
-  top: 7rem;
   width: 23.5rem;
   height: 26rem;
   border-radius: 20px;
   color: #fff;
+  position: absolute;
 }
 
 .cross{
@@ -119,7 +126,6 @@
 
 .name input{
   border-radius: 20px;
-  position: relative;
   top: 0.5rem;
   height: 1.5rem;
   width: 18rem;
@@ -128,13 +134,11 @@
 .category{
   display: flex;
   flex-direction: column;
-  position: relative;
   right: 1rem;
 }
 
 .category input{
   border-radius: 20px;
-  position: relative;
   top: 0.5rem;
   height: 1.5rem;
 }
@@ -142,24 +146,20 @@
 .price{
   display: flex;
   flex-direction: column;
-  position: relative;
   right: 1rem;
 }
 
 .price input{
   border-radius: 20px;
-  position: relative;
   top: 0.5rem;
   height: 1.5rem;
 }
 
 .available{
-  position: relative;
   right: 1rem;
 }
 
 .available input{
-  position: relative;
   left: 1rem;
 }
 
@@ -172,8 +172,8 @@
 
 .Delete{
   position: relative;
-  top: 4rem;
   left: 10rem;
+  display: flex;
 }
 
 .trash{
@@ -182,7 +182,6 @@
   border: none;
   width: 1.5rem;
   height: 1.5rem;
-  position: relative;
   right: 1rem;
   cursor: pointer;
 }
@@ -193,7 +192,6 @@
   border: none;
   width: 1.5rem;
   height: 1.5rem;
-  position: relative;
   right: 0.5rem;
   cursor: pointer;
 }
@@ -201,7 +199,6 @@
 .NAME{
   display: flex;
   flex-direction: column;
-  position: relative;
   right: 1rem;
   font-size: 2em;
   pointer-events: none;
@@ -211,7 +208,6 @@
 .CATEGORY{
   display: flex;
   flex-direction: column;
-  position: relative;
   right: 1rem;
   bottom: 3rem;
 }
@@ -223,7 +219,6 @@
 .PRICE{
   display: flex;
   flex-direction: column;
-  position: relative;
   right: 1rem;
   bottom: 1rem;
 }
@@ -235,7 +230,6 @@
 .AVAILABILITY{
   display: flex;
   flex-direction: column;
-  position: relative;
   right: 1rem;
   bottom: -1rem;
 }
@@ -245,41 +239,190 @@
 }
 
 
-@media screen and (max-width: 320px){
+ @media screen and (max-width: 320px){
 
  
   .List{
     display: grid;
     grid-template-columns: 1fr;
-    position: relative;
+    place-content: center;
+  }
+
+  .Upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .List li{
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title{
+    font-size: 20px;
+  }
+
+  .user{
+    width: 4.5rem;
+    font-size: 9px;
+    margin-top: 2rem;
+  }
+
+  .Form{
+    z-index: 100;
+    left: 3.4rem;
+    top: 12rem;
+    width: 13rem;
+    display: grid;
+    place-content: center;
+  }
+
+  .button{
     left: 5.5rem;
+  }
+
+  .create{
+    width: 8rem;
+    position: relative;
+    left: 2rem;
+  }
+
+  
+
+  .cross{
+    position: relative;
+    right: 3.5rem;
+  }
+
+  .cross button{
+    bottom: 1rem;
+  }
+
+  .name{
+    position: relative;
+    left: 0.1rem;
+  }
+
+  .name input{
+    width: 10.5rem;
+  }
+
+  .name input::placeholder{
+    left: 1rem;
+    font-size: 10px;
+  }
+
+  .category{
+    position: relative;
+    left: 0.1rem;
+  }
+
+  .category input{
+    width: 10.5rem;
+  }
+
+  .category input::placeholder{
+    position: relative;
+    left: 1rem;
+    font-size: 10px;
+  }
+
+  .price{
+    position: relative;
+    left: 0.1rem;
+  }
+
+  .price input{
+    width: 10.5rem;
+  }
+
+  .price input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .available{
+    position: relative;
+    left: 0.1rem;
+  }
+
+  .available input{
+    position: relative;
+    left: 1rem;
+  }
+
+  .Delete{
+    position: relative;
+    left: 4rem;
+  }
+
+  .NAME{
+    font-size: 1.5rem;
+  }
+
+  .CATEGORY{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .PRICE{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .AVAILABILITY{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 321px){
+
+ 
+  .List{
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+  }
+
+  .Upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
 
   .List li{
     width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .title{
-    position: relative;
-    font-size: 25px;
-    left: 4rem;
-    top: 4rem;
+    font-size: 27px;
   }
 
   .user{
-    position: relative;
-    left: 18.5rem;
     width: 5.5rem;
-    font-size: 12px;
-    top: 2.5rem;
+    font-size: 11px;
+    margin-top: 2rem;
   }
 
   .Form{
-    position: absolute;
     z-index: 100;
-    left: 4rem;
-    top: 10rem;
-    width: 19rem;
+    left: 6.04rem;
+    top: 12.3rem;
+    width: 17rem;
   }
 
   .button{
@@ -289,28 +432,40 @@
   .create{
     width: 12rem;
     position: relative;
-    left: 3rem;
+    left: 2rem;
+  }
+
+  .cross{
+    right: 1rem;
+  }
+
+  .cross button{
+    position: relative;
+    left: 7rem;
+    bottom: 1rem;
   }
 
   .name{
-    left: 0.3rem;
+    position: relative;
+    left: 0.2rem;
   }
 
   .name input{
-    width: 17rem;
+    width: 15rem;
+    
   }
 
   .name input::placeholder{
-    position: relative;
     left: 1rem;
   }
 
   .category{
-    left: 0.3rem;
+    position: relative;
+    left: 0.2rem;
   }
 
   .category input{
-    width: 17rem;
+    width: 15rem;
   }
 
   .category input::placeholder{
@@ -319,11 +474,12 @@
   }
 
   .price{
-    left: 0.3rem;
+    position: relative;
+    left: 0.2rem;
   }
 
   .price input{
-    width: 17rem;
+    width: 15rem;
   }
 
   .price input::placeholder{
@@ -332,11 +488,483 @@
   }
 
   .available{
-    left: 0.3rem;
+    position: relative;
+    left: 0.4rem;
   }
 
-  .name input{
+  .available input{
+    position: relative;
+    left: 2rem;
+  }
+
+  .Delete{
+    position: relative;
+    left: 5rem;
+    width: 4rem;
+  }
+
+  .NAME{
+    font-size: 1.8rem;
+  }
+
+  .CATEGORY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .PRICE{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .AVAILABILITY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 576px){
+
+ 
+  .List{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+  }
+
+  .Upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .List li{
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title{
+    font-size: 27px;
+  }
+
+  .user{
+    width: 5.5rem;
+    font-size: 11px;
+    margin-top: 2rem;
+  }
+
+  .Form{
+    z-index: 100;
+    left: 6.04rem;
+    top: 12.3rem;
     width: 17rem;
   }
 
+  .button{
+    left: 8rem;
+  }
+
+  .create{
+    width: 12rem;
+    position: relative;
+    left: 2rem;
+  }
+
+  .cross{
+    right: 1rem;
+  }
+
+  .cross button{
+    position: relative;
+    left: 7rem;
+    bottom: 1rem;
+  }
+
+  .name{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .name input{
+    width: 15rem;
+    
+  }
+
+  .name input::placeholder{
+    left: 1rem;
+  }
+
+  .category{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .category input{
+    width: 15rem;
+  }
+
+  .category input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .price{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .price input{
+    width: 15rem;
+  }
+
+  .price input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .available{
+    position: relative;
+    left: 0.4rem;
+  }
+
+  .available input{
+    position: relative;
+    left: 2rem;
+  }
+
+  .Delete{
+    position: relative;
+    left: 5rem;
+    width: 4rem;
+  }
+
+  .NAME{
+    font-size: 1.8rem;
+  }
+
+  .CATEGORY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .PRICE{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .AVAILABILITY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
 }
+
+@media screen and (min-width: 769px){
+
+ 
+  .List{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    gap: 2.5rem;
+  }
+
+  .Upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .List li{
+    width: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title{
+    font-size: 27px;
+  }
+
+  .user{
+    width: 5.5rem;
+    font-size: 11px;
+    margin-top: 2rem;
+  }
+
+  .Form{
+    z-index: 100;
+    left: 17.94rem;
+    top: 12.3rem;
+    width: 14rem;
+  }
+
+  .button{
+    left: 8rem;
+  }
+
+  .create{
+    width: 8rem;
+    position: relative;
+    left: 2rem;;
+  }
+
+  .cross{
+    right: 2rem;
+    font-size: 15px;
+  }
+
+  .cross button{
+    position: relative;
+    left: 6rem;
+    bottom: 1rem;
+    font-size: 15px;
+  }
+
+  .name{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .name input{
+    width: 12rem;
+    
+  }
+
+  .name input::placeholder{
+    position: relative;
+    left: 0.8rem;
+    font-size: 11px;
+  }
+
+  .category{
+    position: relative;
+    left: 0.2rem;;
+  }
+
+  .category input{
+    width: 12rem;
+  }
+
+  .category input::placeholder{
+    position: relative;
+    left: 0.8rem;
+    font-size: 11px;
+  }
+
+  .price{
+    position: relative;
+    left: 0.2rem;;
+  }
+
+  .price input{
+    width: 12rem;
+  }
+
+  .price input::placeholder{
+    position: relative;
+    left: 0.8rem;
+    font-size: 11px;
+  }
+
+  .available{
+    position: relative;
+    left: 0.2rem;;
+  }
+
+  .available input{
+    position: relative;
+    left: 2rem;
+  }
+
+  .Delete{
+    position: relative;
+    left: 5rem;
+    width: 4rem;
+  }
+
+  .NAME{
+    font-size: 1.8rem;
+  }
+
+  .CATEGORY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .PRICE{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .AVAILABILITY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 992px){
+
+ 
+  .List{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-content: center;
+    gap: 4rem;
+  }
+
+  .Upper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .List li{
+    width: 17rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title{
+    font-size: 32px;
+  }
+
+  .user{
+    width: 7.5rem;
+    font-size: 15px;
+    margin-top: 2rem;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .Form{
+    width: 18rem;
+    position: absolute;
+    left: 32.8rem;
+    top: 13rem;
+  }
+
+  .button{
+    left: 8rem;
+  }
+
+  .create{
+    width: 12rem;
+    position: relative;
+    left: 2rem;
+  }
+
+  .cross{
+    right: 1rem;
+  }
+
+  .cross button{
+    position: relative;
+    left: 7rem;
+    bottom: 1rem;
+  }
+
+  .name{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .name input{
+    width: 15rem;
+    
+  }
+
+  .name input::placeholder{
+    left: 1rem;
+  }
+
+  .category{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .category input{
+    width: 15rem;
+  }
+
+  .category input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .price{
+    position: relative;
+    left: 0.2rem;
+  }
+
+  .price input{
+    width: 15rem;
+  }
+
+  .price input::placeholder{
+    position: relative;
+    left: 1rem;
+  }
+
+  .available{
+    position: relative;
+    left: 0.4rem;
+  }
+
+  .available input{
+    position: relative;
+    left: 2rem;
+  }
+
+  .Delete{
+    position: relative;
+    left: 5rem;
+    width: 4rem;
+  }
+
+  .NAME{
+    font-size: 1.8rem;
+  }
+
+  .CATEGORY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .PRICE{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .AVAILABILITY{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+
+
